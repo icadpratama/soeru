@@ -16,4 +16,8 @@ public class UserService {
         List<User> userList = repository.findAll();
         return  userList;
     }
+
+    public List<User> getAllUsersByPrivilege(Character privilege){
+        return repository.findAllByPrivilege(privilege);
+    }
 }
